@@ -106,18 +106,37 @@ bool BinSearchTree::remove(int key){
 }
 
 
-// traversal
-void BinSearchTree::traverseNodes() {
-    traverseNodes(root); // call the traversal with the root, which is private
+// inorder traversal
+void BinSearchTree::inTrav() {
+    inTrav(root); // call the traversal with the root, which is private
 }
 
-void BinSearchTree::traverseNodes(TreeNode* root) {
+void BinSearchTree::inTrav(TreeNode* root) {
     if (root == nullptr) {
         return;
     }
-    traverseNodes(root->left);
+    inTrav(root->left);
     std::cout << root->info << " ";
-    traverseNodes(root->right);
+    inTrav(root->right);
+}
+
+
+//recursive preorder traversal
+void BinSearchTree::preTav(TreeNode *root) {
+    if(root != nullptr){
+        std::cout << root->info << " ";
+        preTav(root->left);
+        preTav(root->right);
+    }
+}
+
+// recursive postorder traversal
+void BinSearchTree::postTrav(TreeNode* root){
+    if(root != nullptr){
+        postTrav(root->left);
+        postTrav(root->right);
+        std::cout << root->info << " ";
+    }
 }
 
 // Recursively count the nodes in the tree

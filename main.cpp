@@ -714,9 +714,9 @@ int main() {
     st.insert(10);
     st.insert(14);
 
-    // now traverse
+    // now inorder traversal
     std::cout << "inorder traversal:  ";
-    st.traverseNodes();
+    st.inTrav();
 
     cout << "\nNumber of nodes in tree: " << st.count(st.getRoot());
 
@@ -724,11 +724,13 @@ int main() {
 
     cout << "\nHeight of tree: " << st.height(st.getRoot()) << "\n";
 
-    st.remove(14);
-    st.traverseNodes();
+    st.inTrav();
 
+    std::cout << "\npreorder traversal: ";
+    st.preTav(st.getRoot());
 
-
+    std::cout << "\npostorder traversal: ";
+    st.postTrav(st.getRoot());
 
 
 

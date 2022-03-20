@@ -25,8 +25,17 @@ public:
 
     bool insert(int newInt);
     bool remove(int key);
-    void traverseNodes();
-    void traverseNodes(TreeNode* root);
+
+    // recursive inorder traversal
+    void inTrav();
+    void inTrav(TreeNode* root);
+
+    //recursive preorder traversal
+    void preTav(TreeNode* root);
+
+    // recursive postorder traversal
+    void postTrav(TreeNode* root);
+
 
     // Recursively count the nodes in the tree
     int count(TreeNode* rt);
