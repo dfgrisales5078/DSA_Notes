@@ -122,11 +122,11 @@ void BinSearchTree::inTrav(TreeNode* root) {
 
 
 //recursive preorder traversal
-void BinSearchTree::preTav(TreeNode *root) {
+void BinSearchTree::preTrav(TreeNode *root) {
     if(root != nullptr){
         std::cout << root->info << " ";
-        preTav(root->left);
-        preTav(root->right);
+        preTrav(root->left);
+        preTrav(root->right);
     }
 }
 
