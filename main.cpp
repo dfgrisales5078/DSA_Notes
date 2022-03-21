@@ -714,7 +714,7 @@ int main() {
     st.insert(10);
     st.insert(14);
 
-    // now inorder traversal
+
     std::cout << "inorder traversal:  ";
     st.inTrav();
 
@@ -727,11 +727,10 @@ int main() {
     st.inTrav();
 
     std::cout << "\npreorder traversal: ";
-    st.preTav(st.getRoot());
+    st.preTrav(st.getRoot());
 
     std::cout << "\npostorder traversal: ";
     st.postTrav(st.getRoot());
-
 
 
 }
