@@ -7,9 +7,10 @@
 // the tree node struct
 struct TreeNode {
     int info {};
-    TreeNode *left = nullptr;
-    TreeNode *right = nullptr;
+    TreeNode * left = nullptr;
+    TreeNode * right = nullptr;
 };
+
 
 // the binary search tree class
 class BinSearchTree {
@@ -29,6 +30,10 @@ public:
     // recursive inorder traversal
     void inTrav();
     void inTrav(TreeNode* root);
+
+
+    void printLessThanK(TreeNode* root, int k);
+
 
     //recursive preorder traversal
     void preTrav(TreeNode* root);

@@ -121,6 +121,18 @@ void BinSearchTree::inTrav(TreeNode* root) {
 }
 
 
+// Quiz method
+void BinSearchTree::printLessThanK(TreeNode* root, int k) {
+    if (root != nullptr){
+        printLessThanK(root->left, k);
+        if (root->info < k) {
+            std::cout << root->info << " ";
+        }
+        printLessThanK(root->right, k);
+    }
+}
+
+
 //recursive preorder traversal
 void BinSearchTree::preTrav(TreeNode *root) {
     if(root != nullptr){
