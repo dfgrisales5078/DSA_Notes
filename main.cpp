@@ -759,7 +759,7 @@ void printArray(int x[]){
     std::cout<<"\n";
 }
 
-void heapsort(int x[]){
+void heapSort(int x[]){
     int i, parent, child;
 
     if(SIZE == 0)	return;
@@ -819,7 +819,7 @@ void heapsort(int x[]){
     std::cout <<"\t\t";
     printArray(x);
 
-} // end heapsort
+} // end heapSort
 
 
 int main(){
@@ -827,7 +827,7 @@ int main(){
     std::cout << "Numbers:\n";
     printArray(b);
 
-    heapsort(b);
+    heapSort(b);
     std::cout << "\nSorted numbers using Heap sort: ";
     printArray(b);
 }
