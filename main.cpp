@@ -785,14 +785,12 @@ void heapSort(int x[]){
     // in its proper position and adjust the heap
     for(i = SIZE-1; i > 0; i--){
         // bubble-down
-
         std::cout <<"i=" << i << "  x[i]=" << x[i] << "\t";
         printArray(x);
 
         //put x[0] in i-th position
         int iValue = x[i];
         x[i] = x[0];
-
         parent = 0;
 
         //select the large child
@@ -801,7 +799,6 @@ void heapSort(int x[]){
         if(i > 2 && x[2] > x[1])		child = 2;
 
         while(child >= 0 && iValue < x[child]){
-
             //move child into parent position
             x[parent] = x[child];
             parent = child;

@@ -127,8 +127,9 @@ void BinSearchTree::printLessThanK(TreeNode* root, int k) {
         printLessThanK(root->left, k);
         if (root->info < k) {
             std::cout << root->info << " ";
+            printLessThanK(root->right, k);
         }
-        printLessThanK(root->right, k);
+
     }
 }
 
