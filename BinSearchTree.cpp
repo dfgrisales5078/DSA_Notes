@@ -160,6 +160,8 @@ int BinSearchTree::count(TreeNode *rt) {
     return 1 + count( rt->left) + count(rt->right);
 }
 
+
+
 // Exercise 1: recursive method to find sum of values of all nodes
 int BinSearchTree::sumOfValues(TreeNode* rt) {
     if (rt == nullptr) {

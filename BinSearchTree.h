@@ -31,7 +31,7 @@ public:
     void inTrav();
     void inTrav(TreeNode* root);
 
-
+    // quiz method
     void printLessThanK(TreeNode* root, int k);
 
 

@@ -671,29 +671,38 @@ int main() {
 
 
 #include "DynamicQueue.h"
-
 /*
+
 int main() {
 
     DynamicQueue queue = DynamicQueue();
-    queue.insert(5);
-    std::cout << "Inserted 5 into queue" << std::endl;
+    queue.insert(6);
+    std::cout << "Inserted 6 into queue" << std::endl;
     queue.insert(7);
     std::cout << "Inserted 7 into queue" << std::endl;
+    queue.insert(8);
+    std::cout << "Inserted 8 into queue" << std::endl;
+    queue.insert(9);
+    std::cout << "Inserted 9 into queue" << std::endl;
+
+    queue.print();
+    DynamicNode * N = queue.search(8);
+    std::cout << N->info <<"\n";
 
 
-    queue.remove();
-    std::cout << "Removed 5 from queue" << std::endl;
-    queue.remove();
-    std::cout << "Removed 7 from queue" << std::endl;
+//    queue.remove();
+//    std::cout << "Removed 5 from queue" << std::endl;
+//    queue.remove();
+//    std::cout << "Removed 7 from queue" << std::endl;
 
     //code should exit here due to underflow
-    std::cout << "Attempting to remove from an empty queue..." << std::endl;
-    queue.remove();
+//    std::cout << "Attempting to remove from an empty queue..." << std::endl;
+//    queue.remove();
 
 
 }
 */
+
 //--------------------- End Queues Main() --------------------------
 
 
@@ -701,7 +710,7 @@ int main() {
 
 //--------------- Binary Search Trees Main() ----------------------
 
-/*
+
 #include "BinSearchTree.h"
 
 
@@ -741,14 +750,14 @@ int main() {
 
 }
 
-*/
+
 //--------------- End - Binary Search Trees Main() ----------------------
 
 
 
-//--------------- Binary Search Trees Main() ----------------------
+//------------------------- Heapsort Main() -----------------------------
 
-
+/*
 const int SIZE = 8; //the length of the array
 
 void printArray(int x[]){
@@ -828,3 +837,7 @@ int main(){
     std::cout << "\nSorted numbers using Heap sort: ";
     printArray(b);
 }
+
+*/
+
+//----------------------- End Heapsort Main() ---------------------------
