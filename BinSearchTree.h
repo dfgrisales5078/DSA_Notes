@@ -53,9 +53,41 @@ public:
     int height(TreeNode* rt);
 
 
+    // find and return max value in BTS
+    int maxValue(TreeNode * root);
+
+
+    // find and return min value in BTS
+    int minValue(TreeNode * root);
+
+
 private:
     TreeNode* root;
 };
 
 
 #endif
+
+
+
+
+// Find max value in a binary tree
+// TODO NOT BST
+// Adapted From geeks
+
+int findMax(TreeNode* root){
+    if (root == nullptr) // base case
+        return INT_MIN; // some low negative value
+
+    // Return maximum of 3 values:
+    // 1) Root's value 2) Max in Left Subtree 3) Max in right subtree
+    int Max = root->info;
+
+    int leftMax = findMax(root->left);
+    int rightMax = findMax(root->right);
+
+    //compare values and return largest of the three
+    if (leftMax > Max) Max = leftMax;
+    if (rightMax > Max) Max = rightMax;
+    return Max;
+}

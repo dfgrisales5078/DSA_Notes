@@ -713,7 +713,7 @@ int main() {
 
 #include "BinSearchTree.h"
 
-
+/*
 int main() {
     // BST main code test
     BinSearchTree st = BinSearchTree(); // the tree object
@@ -747,17 +747,18 @@ int main() {
     std::cout << "\npostorder traversal: ";
     st.postTrav(st.getRoot());
 
-
+    std::cout << "\nMin value: " << st.minValue(st.getRoot());
+    std::cout << "\nMax value: " << st.maxValue(st.getRoot());
 }
 
-
+*/
 //--------------- End - Binary Search Trees Main() ----------------------
 
 
 
 //------------------------- Heapsort Main() -----------------------------
 
-/*
+
 const int SIZE = 8; //the length of the array
 
 void printArray(int x[]){
@@ -838,6 +839,6 @@ int main(){
     printArray(b);
 }
 
-*/
+
 
 //----------------------- End Heapsort Main() ---------------------------

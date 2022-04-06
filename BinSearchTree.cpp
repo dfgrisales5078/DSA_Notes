@@ -181,3 +181,27 @@ int BinSearchTree::height(TreeNode* rt) {
     return std::max(1 + height(rt->left), 1 + height(rt->right));
 
 }
+
+// find and return max value in BTS
+int BinSearchTree::maxValue(TreeNode * root){
+    if (root == nullptr) {
+        return INT_MIN;
+    }
+    while (root->right != nullptr) {
+        root = root->right;
+    }
+    return root->info;
+}
+
+
+
+// find and return min value in BTS
+int BinSearchTree::minValue(TreeNode * root){
+    if (root == nullptr) {
+        return INT_MIN;
+    }
+    while (root->left != nullptr) {
+        root = root->left;
+    }
+    return root->info;
+}
