@@ -57,6 +57,41 @@ public:
         return temp;
     }
 
+
+    // print queue
+    void print() {
+        if (empty()) {
+            cout << "Queue is empty." << endl;
+        }
+        else {
+            cout << "Data of queue: ";
+            DynamicNode *p = front;
+            while (p != nullptr) {
+                cout << p->info;
+                if (p->next != nullptr) {
+                    cout << " -> ";
+                }
+                else {
+                    cout << "\n";
+                }
+                p = p->next;
+            }
+        }
+    }
+
+
+
+    // search for x
+    DynamicNode * search(int x) {
+        DynamicNode *p = front; // node p == head (first element)
+        for (p; p != nullptr; p = p->next) {
+            if (p->info == x) {
+                return p;
+            }
+        }
+        return nullptr; // if x is not in the list
+    }
+
 private:
     DynamicNode* front;
     DynamicNode* rear;
