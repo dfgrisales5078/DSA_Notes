@@ -701,7 +701,7 @@ int main() {
 
 //--------------- Binary Search Trees Main() ----------------------
 
-/*
+
 #include "BinSearchTree.h"
 
 
@@ -716,12 +716,11 @@ int main() {
     st.insert(10);
     st.insert(14);
 
-
     std::cout << "inorder traversal:  ";
     st.inTrav();
 
     std::cout << "\nless than 10: ";
-    st.printLessThanK(st.getRoot(), 14);
+    st.printLessThanK(st.getRoot(), 10);
 
 
     cout << "\nNumber of nodes in tree: " << st.count(st.getRoot());
@@ -738,17 +737,18 @@ int main() {
     std::cout << "\npostorder traversal: ";
     st.postTrav(st.getRoot());
 
+    TreeNode * N = st.findMin(st.getRoot());
+    std::cout << "\nSmallest number: " << N->info;
 
 }
 
-*/
+
 //--------------- End - Binary Search Trees Main() ----------------------
 
 
+//--------------- Heap/Heapsort Main() ----------------------
 
-//--------------- Binary Search Trees Main() ----------------------
-
-
+/*
 const int SIZE = 8; //the length of the array
 
 void printArray(int x[]){
@@ -828,3 +828,7 @@ int main(){
     std::cout << "\nSorted numbers using Heap sort: ";
     printArray(b);
 }
+*/
+
+
+//--------------- End Heap/Heapsort Main() ----------------------

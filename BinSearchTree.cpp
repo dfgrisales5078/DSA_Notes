@@ -111,28 +111,14 @@ void BinSearchTree::inTrav() {
     inTrav(root); // call the traversal with the root, which is private
 }
 
+
 void BinSearchTree::inTrav(TreeNode* root) {
-    if (root == nullptr) {
-        return;
-    }
-    inTrav(root->left);
-    std::cout << root->info << " ";
-    inTrav(root->right);
-}
-
-
-// Quiz method
-void BinSearchTree::printLessThanK(TreeNode* root, int k) {
-    if (root != nullptr){
-        printLessThanK(root->left, k);
-        if (root->info < k) {
-            std::cout << root->info << " ";
-            printLessThanK(root->right, k);
-        }
-
+    if (root != nullptr) {
+        inTrav(root->left);
+        std::cout << root->info << " ";
+        inTrav(root->right);
     }
 }
-
 
 //recursive preorder traversal
 void BinSearchTree::preTrav(TreeNode *root) {
@@ -151,6 +137,28 @@ void BinSearchTree::postTrav(TreeNode* root){
         std::cout << root->info << " ";
     }
 }
+
+
+TreeNode * BinSearchTree::findMin(TreeNode* root){
+    if (root == nullptr) {return nullptr; }
+    while (root->left != nullptr) {
+        root = root->left;
+    }
+    return root;
+}
+
+// Quiz method
+void BinSearchTree::printLessThanK(TreeNode* root, int k) {
+    if (root != nullptr){
+        printLessThanK(root->left, k);
+        if (root->info < k) {
+            std::cout << root->info << " ";
+            printLessThanK(root->right, k);
+        }
+
+    }
+}
+
 
 // Recursively count the nodes in the tree
 int BinSearchTree::count(TreeNode *rt) {

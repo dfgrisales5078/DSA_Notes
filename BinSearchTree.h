@@ -21,19 +21,20 @@ public:
         root = nullptr;
     }
 
-    //------------------------------ methods --------------------------------
+    //------------------------ methods --------------------------
     TreeNode * getRoot();
 
     bool insert(int newInt);
     bool remove(int key);
 
-    // recursive inorder traversal
-    void inTrav();
-    void inTrav(TreeNode* root);
 
+    TreeNode * findMin(TreeNode* root);
 
     void printLessThanK(TreeNode* root, int k);
 
+    // recursive inorder traversal
+    void inTrav();
+    void inTrav(TreeNode* root);
 
     //recursive preorder traversal
     void preTrav(TreeNode* root);
