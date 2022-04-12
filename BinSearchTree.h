@@ -61,6 +61,11 @@ public:
     int minValue(TreeNode * root);
 
 
+    // exam 2 question
+    // sum of values of leaf nodes
+    int sumOfLeaves(TreeNode * root);
+
+
 private:
     TreeNode* root;
 };

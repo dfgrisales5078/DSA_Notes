@@ -719,6 +719,9 @@ int main() {
     std::cout << "inorder traversal:  ";
     st.inTrav();
 
+    std::cout << "\nSum of leaf node values: " << st.sumOfLeaves(st.getRoot());
+
+
     std::cout << "\nless than 10: ";
     st.printLessThanK(st.getRoot(), 10);
 
@@ -739,6 +742,8 @@ int main() {
 
     TreeNode * N = st.findMin(st.getRoot());
     std::cout << "\nSmallest number: " << N->info;
+
+
 
 }
 

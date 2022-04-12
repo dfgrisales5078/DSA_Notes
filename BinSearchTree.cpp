@@ -213,3 +213,22 @@ int BinSearchTree::minValue(TreeNode * root){
     }
     return root->info;
 }
+
+
+
+// exam 2 question
+
+
+
+// sum of values of leaf nodes
+int BinSearchTree::sumOfLeaves(TreeNode * rt) {
+    if (rt == nullptr) {
+        return 0;
+    }
+
+
+    if (rt->left == nullptr && rt->right == nullptr) {
+        return rt->info + sumOfLeaves(rt->left) + sumOfLeaves(rt->right);
+    }
+}
+
