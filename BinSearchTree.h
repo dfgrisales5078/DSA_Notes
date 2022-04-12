@@ -54,6 +54,13 @@ public:
     int height(TreeNode* rt);
 
 
+    // find and return max value in BTS
+    int maxValue(TreeNode * root);
+
+    // find and return min value in BTS
+    int minValue(TreeNode * root);
+
+
 private:
     TreeNode* root;
 };
