@@ -978,8 +978,13 @@ char findFirstNonRepeatedVer2(string str){
 
 
 int main() {
+
     char a = findFirstNonRepeatedVer1("teetero");
-    cout << a;
+    cout << "From algorithm 1: " << a << endl;
+
+
+    char b = findFirstNonRepeatedVer2("teetero");
+    cout << "From algorithm 2: " << b;
     return 0;
 }
 
