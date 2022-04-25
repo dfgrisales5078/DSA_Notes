@@ -841,6 +841,7 @@ int main(){
 
 //--------------- Quicksort Main() ----------------------
 
+/*
 
 int partition (int x[], int lb, int ub){
     int down, up, a, temp;
@@ -902,8 +903,85 @@ int main() {
     
 
 }
+*/
 
 //--------------- End Quicksort Main() ----------------------
 
 
+//--------------- Quiz 6 - Big O Main() ----------------------
 
+
+using namespace std;
+
+
+// Algorithm 1
+char findFirstNonRepeatedVer1(string str) {
+    // if string is empty return
+    if(str.empty()) {
+        return 0;
+    }
+
+    //if the length of the string is 1 return index 0
+    else if(str.length() == 1) {
+        return str.at(0);
+    }
+
+    // traverse the string with index i
+    for(int i=0;i<str.length();i++) {
+        bool non_repeated=true;
+        // traverse the string with index j
+        for(int j=0;j<str.length();j++) {
+            // if i = j skip inner loop iteration
+            // j is incremented but i stays the same
+            if(i==j){
+                continue;
+            }
+            // if char at index i == char at index j, non_repeated is false and break statement
+            if(str.at(i)==str.at(j)) {
+                non_repeated=false;
+                break;
+            }
+        }
+        if(non_repeated)
+            return str.at(i);
+    }
+    return 0;
+}
+
+
+
+// algorithm 2
+char findFirstNonRepeatedVer2(string str){
+    if(str.empty()){
+        return 0;
+    }else if(str.length()==1){
+        return str.at(0);
+    }
+    int * firstPos= new int[65536];
+    bool * repeat = new bool[str.length()];
+    for(int i=0;i<str.length();i++){
+        int index = (int)str.at(i);
+        if(firstPos[index]!=str.empty()){
+            repeat[firstPos[index]] = true;
+            repeat[i] = true;
+        }else{
+            firstPos[index] = i;
+        }
+    }
+    for(int i=0;i<str.length();i++){
+        if(repeat[i]==false){
+            return str.at(i);
+        }
+    }
+    return 0;
+}
+
+
+int main() {
+    char a = findFirstNonRepeatedVer1("teetero");
+    cout << a;
+    return 0;
+}
+
+
+//--------------- End Quiz 6 - Big O Main() ----------------------
