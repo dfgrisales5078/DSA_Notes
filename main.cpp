@@ -911,6 +911,7 @@ int main() {
 //--------------- Quiz 6 - Big O Main() ----------------------
 
 
+/*
 using namespace std;
 
 
@@ -987,6 +988,31 @@ int main() {
     cout << "From algorithm 2: " << b;
     return 0;
 }
-
+*/
 
 //--------------- End Quiz 6 - Big O Main() ----------------------
+
+
+//--------------- Exam - Main() ----------------------
+
+#include "BinSearchTree.h"
+
+int main() {
+
+    string words[] = {"one", "two", "three", "one", "four", "one"};
+    int n = 6;
+    for (int i = 0; i < n; i++) { // n = total number of words we read
+            int count = 0;
+            for (int j = 0; j < n; j++) {
+                if (words[i] == words[j]) {
+                    if (j < i) {
+                            //break; // why is this needed?
+                        }
+                    count++;
+                }
+            }
+            std::cout << words[i] << ": " << count << std::endl;
+    }
+
+
+}
